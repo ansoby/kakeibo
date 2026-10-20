@@ -80,7 +80,9 @@ describe("収支の登録", () => {
       app.unmount();
       renderApp({ month: "2026-09" });
       expect(screen.getByText("登録テスト")).toBeDefined();
-      expect(screen.getByText("1,200円")).toBeDefined();
+      expect(
+        within(screen.getByRole("region", { name: "取引" })).getByText("1,200円"),
+      ).toBeDefined();
     },
   );
 
