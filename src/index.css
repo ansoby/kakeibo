@@ -1,0 +1,57 @@
+/* デザイントークンの SSoT。表は docs/product/design.md。値を足すときはライトとダークの両方に書く。 */
+@import "tailwindcss";
+
+@theme {
+  /* Tailwind の既定の色を消し、ここに定めた色だけを使えるようにする。 */
+  --color-*: initial;
+
+  --color-bg: #f6f7f9;
+  --color-surface: #ffffff;
+  --color-surface-muted: #eef0f3;
+  --color-border: #dde1e6;
+  --color-text: #1c2330;
+  --color-text-muted: #5b6573;
+  --color-primary: #2f5bd3;
+  --color-on-primary: #ffffff;
+  --color-income: #1f8a5b;
+  --color-expense: #c8463d;
+  --color-danger: #c8463d;
+
+  --color-cat-1: #e07a3f;
+  --color-cat-2: #c99a1e;
+  --color-cat-3: #4a7bd0;
+  --color-cat-4: #2a9d8f;
+  --color-cat-5: #8e6cc8;
+  --color-cat-6: #d0608f;
+  --color-cat-7: #8a94a3;
+
+  --font-sans: system-ui, "Hiragino Sans", "Noto Sans JP", sans-serif;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-bg: #12151b;
+    --color-surface: #1b2029;
+    --color-surface-muted: #262d39;
+    --color-border: #313a48;
+    --color-text: #e6e9ee;
+    --color-text-muted: #9aa4b2;
+    --color-primary: #7a9cf0;
+    --color-on-primary: #0f1420;
+    --color-income: #4cc28d;
+    --color-expense: #f07a70;
+    --color-danger: #f07a70;
+
+    --color-cat-1: #f0995f;
+    --color-cat-2: #e2bb4a;
+    --color-cat-3: #7aa2e8;
+    --color-cat-4: #4cc0b2;
+    --color-cat-5: #b096e0;
+    --color-cat-6: #e888b0;
+    --color-cat-7: #a3adbb;
+  }
+}
+
+:root {
+  color-scheme: light dark;
+}
